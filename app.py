@@ -4,7 +4,7 @@ import Practo_Scrap
 import GeminiAI
 
 app = Flask(__name__)
-socketio = SocketIO(app,cors_allowed_origins='*')
+socketio = SocketIO(app, ping_interval=10, cors_allowed_origins='*')
 
 
 @socketio.on('connect')
